@@ -3,6 +3,7 @@ Include:
 * SaSS
 * Redux
 * Nextjs
+* Router
 
 ToDo: 
 * eslint integration
