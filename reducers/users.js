@@ -1,7 +1,7 @@
 import {FETCH_USERS_ERROR, FETCH_USERS_SUCCESS, FETCH_USERS_START} from "../actions/user";
 
 const initialState = {
-    data: [],
+    // data: [],
     error: null,
     fetching: false
 };
