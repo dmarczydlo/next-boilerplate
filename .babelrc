@@ -7,7 +7,14 @@
       "presets": ["next/babel"]
     },
     "test": {
-      "presets": ["next/babel"]
+      "presets": [
+        [
+          {
+            "modules": "commonjs"
+          }
+        ],
+        "next/babel"
+      ]
     }
   }
 }
