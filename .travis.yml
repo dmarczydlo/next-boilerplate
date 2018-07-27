@@ -1,10 +1,18 @@
-language: node_js
+sudo: false
 
-git:
-    depth: 1
+language: node_js
 
 node_js:
   - '10'
 
-cache: yarn
-after_script: "cat ./coverage/lcov.info | coveralls"
+install:
+  - npm install
+
+cache:
+  directories:
+    - node_modules
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
