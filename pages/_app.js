@@ -5,7 +5,9 @@ import withRedux from "next-redux-wrapper";
 import store from "../lib/store";
 import Layout from '../components/layout';
 
-export default withRedux(store, {debug: true})(class MyApp extends App {
+export default withRedux(store, {
+    debug: typeof window !== 'undefined' && process.env.NODE_ENV !== 'production'
+})(class MyApp extends App {
 
     static async getInitialProps({Component, ctx}) {
         return {
