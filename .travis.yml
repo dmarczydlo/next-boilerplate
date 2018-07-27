@@ -1,20 +1,26 @@
-sudo: required
-before_install:
-  - npm install -g node-gyp
-language: node_js
-node_js:
-  - 10
-env:
-  - CXX=g++-4.9
+sudo: false
 
+language: node_js
+
+node_js:
+  - '6'
+  - '10'
+
+install:
+  - npm install
+
+cache:
+  directories:
+    - node_modules
+
+# Necessary to compile native modules for io.js v3 or Node.js v4
+env:
+  - CXX=g++-4.8
+
+# Necessary to compile native modules for io.js v3 or Node.js v4
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - g++-4.9
-
-cache:
-  apt: true
-  directories:
-    - node_modules
+      - g++-4.8
