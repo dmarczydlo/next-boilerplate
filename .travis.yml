@@ -1,19 +1,19 @@
-before_install:
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.9" CC="gcc-4.9"; fi
-
-
+sudo: false
 language: node_js
-
-git:
-    depth: 1
-
 node_js:
-  - '10'
+  - "10.0"
+  - "node"
+env:
+  - CXX=g++-4.8
 
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - gcc-4.9
-      - g++-4.9
+      - g++-4.8
+
+cache:
+  apt: true
+  directories:
+    - node_modules
