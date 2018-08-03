@@ -1,4 +1,7 @@
 # next-boilerplate
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/dmarczydlo/next-boilerplate.svg)](https://greenkeeper.io/)
+
 Include: 
 * SaSS
 * Redux
